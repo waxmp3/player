@@ -1,0 +1,24 @@
+
+/*
+   This CSS will only get pulled in if the startup process has failed 
+   for some reason, for example if JavaScript is off or Flash isn't there.
+*/
+
+body.nojavascript div#fallback {
+    display: block;
+}
+
+/* hide everything except the fallback */
+body.nojavascript div#top, div#bottom { display: none }
+
+/* neutralize styles from the full scale site to ensure that the fallback text is visible */
+body.nojavascript html { background: white; }
+
+/* as pretty as possible, in case CSS is working */
+body.nojavascript  {
+    text-align: center;
+    padding: 4em;
+    font-size: 125%;
+    color: black;
+    background: white;
+}

@@ -1,0 +1,142 @@
+
+html {
+    background-color: black;
+    color: white;
+}
+body {
+    font-size: 115%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+/* workaround for lack of transparent PNGs in IE 6 */
+img {
+    behavior: url(everybody/css/iepngfix/iepngfix.htc);
+}
+
+img.guideicon {
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+div#top {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+div#top {
+    text-align: center;
+}
+div#top div.trackcontrols img {
+    margin: 0 2em 0 2em;
+    padding-top: .5em;
+}
+div#top div.organizational {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+div#top div.station {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+div#top div.station select {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 10px;
+    color: gray;
+    border: 1px solid gray;
+    background-color: black;
+    color: gray;
+}
+
+iframe#infoframe {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    border: 0;
+}
+
+div#bottom {
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    border: 0;
+    margin: 0;
+}
+div#bottom p.metadata {
+    text-align: left;
+    margin: 5px;
+}
+div#bottom .title { color: gray; }
+
+div#bottom p.viral {
+    font-size: 80%;
+    text-align: right;
+    color: white;
+    margin: 5px;
+}
+div#bottom input {
+    width: 4em;
+    font-family: Courier-New, Courier-New, Courier, monospace;
+    margin-right: 0;
+    border: 0;
+    padding: 2px;
+    height: 20px;
+}
+div#bottom p.viral a, div#bottom p.viral code {
+    margin-left: 15px;
+}
+
+
+/* put these items away when a fatal error happens.  these items are also hidden until initialization is complete. */
+.error .hideonerror { 
+    visibility: hidden;
+}
+div#crisis {
+    text-align: center;
+    color: white;
+    font-size: 125%;
+    /* push this down underneath the edge of the top control strip */
+    margin-top: 6em;
+    /* will be switched on in the event of a fatal error */
+    display: none; 
+}
+div#crisis p.emoticon {
+    margin: 2em;
+    color: red;
+}
+
+
+/*****************************************
+   * The following CSS will only get used if javascript is off.
+   *****************************************/
+body.nojavascript div#fallback { display: block; }
+/* hide everything except the fallback */
+body.nojavascript div#top, body.nojavascript div#bottom { display: none }
+/* neutralize styles from the full scale site to ensure that the fallback text is visible */
+body.nojavascript html { background: white; }
+/* as pretty as possible, in case CSS is working */
+body.nojavascript  {
+    text-align: center;
+    padding: 4em;
+    font-size: 125%;
+    color: black;
+    background: white;
+    height: 40em; /* keep html background from peeking through */
+    padding: 0;
+    margin: 0;
+}
+body.nojavascript table, body.nojavascript tr, body.nojavascript td { border: 0 }
+
+
+
+
