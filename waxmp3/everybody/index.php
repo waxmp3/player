@@ -139,7 +139,7 @@ if($trackID = getTrackID()){
 
   $vars['PAGETITLE'] =  $vars['AUDIOARTIST']." - ".$vars['AUDIOTITLE'];
   $vars['SUBTITLE'] = $vars['AUDIOARTIST']." / ".$vars['AUDIOTITLE'];
-  $vars['AUDIOANNOTATION'] =  "http://waxmp3.com";
+  $vars['AUDIOANNOTATION'] =  $vars['SERP'];
 
   // for Facebook embedding. Docs at http://www.facebook.com/share_partners.php
   $image = $xspf->getTrackImage($trackID);

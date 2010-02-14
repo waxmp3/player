@@ -10,7 +10,10 @@ function getUserStationName(){
 
 function getStationHTML(){
 
-  $files = scandir("justyou/stations");
+  $stationDir = "justyou/stations";
+  if( !file_exists($stationDir) )
+    return(FALSE);
+  $files = scandir($stationDir);
   if( FALSE === $files )
     return(FALSE);
   if( count($files) < 4 ) // including . and ..

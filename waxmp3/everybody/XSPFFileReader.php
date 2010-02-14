@@ -3,8 +3,8 @@
   // xspf file is basically the config file
 class XSPFFileReader {
 
-  private $xml;
-  private $index = Array();
+  var $xml;
+  var $index = Array();
 
   // get value of the first meta element with matching rel value
   // see http://xspf.org/xspf-v1.html#rfc.section.4.1.1.2.12

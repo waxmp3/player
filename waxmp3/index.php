@@ -1,5 +1,31 @@
 <?php
 
+if (version_compare(PHP_VERSION, '5.0.0', '<')) {
+  header("Content-type","text/html");
+  print <<<END
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+<div id="google_translate_element" style="text-align: right; border:0; padding: 1em;"></div><script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en'
+  }, 'google_translate_element');
+}
+</script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<p style="text-align:center"><a href="http://waxmp3.com">Wax MP3</a> needs PHP 5 or greater.  It can't use PHP 4.</p>
+  </body>
+</html>
+
+END;
+exit;
+}
+  
 require_once("everybody/stations.php");
 
 $stationFile = getUserStationFile();

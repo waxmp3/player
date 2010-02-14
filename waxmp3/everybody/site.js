@@ -560,9 +560,10 @@ MY.View = function(){
   $("img.play").click(function() {
       MY.controller.handlePlayButton();
     });
-  $("div#top select option").click(function(){
+  // this has to be the change event and not the click event because the click event doesn't fire in Chrome and probably IE
+  $("select#stations").change(function(){
       MY.controller.handleStationSelect(this.value);
-    });
+  });
 
   // auto-select field contents when the user clicks on them
   $("input#permalink").click(function(e){ $("input#permalink").get(0).select(); });
